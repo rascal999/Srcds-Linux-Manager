@@ -1,3 +1,3 @@
 #!/bin/bash
 
-DIR='/home/gmod/srcds'
+DIR='/home/to/srcds'
