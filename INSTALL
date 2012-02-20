@@ -1,3 +1,23 @@
 SLM install
 
 - Move scripts directory into /home/user/srcds
+
+- Update scripts/globals.sh with path to srcds directory (e.g. /home/cs/srcds)
+
+- Create server configs under cfg/ directory (e.g. server1.cfg, server2.cfg)
+
+- Append to svn_update script the servers you wish to restart after SVN update. Example:
+
+#Individual servers
+/home/gmod/srcds/scripts/update.sh construct server_construct.cfg
+/home/gmod/srcds/scripts/update.sh build server_build.cfg
+
+- Add check.sh and svn_update.sh crontabs. Example:
+
+*/2  *    * * *   gmod    /home/gmod/srcds/scripts/check.sh construct server_construct.cfg
+*/2  *    * * *   gmod    /home/gmod/srcds/scripts/check.sh build server_build.cfg
+30  7    * * *   gmod    /home/gmod/srcds/scripts/svn_update.sh
+
+The check script runs every two minutes, svn_update script runs at 0730 each day.
+
+- Update the create.sh and svn_update.sh scripts to tailor to your needs.
