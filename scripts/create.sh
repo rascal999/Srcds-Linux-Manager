@@ -2,7 +2,7 @@
 
 #create.sh <server_name> <server_config>
 
-source globals.sh
+source /home/gmod/srcds/scripts/globals.sh
 
 SERVER_NAME=$1
 SERVER_CFG=$2

@@ -4,6 +4,8 @@ SLM install
 
 - Update scripts/globals.sh with path to srcds directory (e.g. /home/cs/srcds)
 
+- Update to include full path to globals.sh in each script :/
+
 - Create server configs under cfg/ directory (e.g. server1.cfg, server2.cfg)
 
 - Append to svn_update script the servers you wish to restart after SVN update. Example:

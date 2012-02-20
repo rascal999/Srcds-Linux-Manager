@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source globals.sh
+source /home/gmod/srcds/scripts/globals.sh
 
 SERVER_NAME=$1
 SERVER_CFG=$2
@@ -32,4 +32,4 @@ sleep 1
 /usr/bin/screen -dR $SERVER_NAME -X stuff $'exit\n'
 sleep 5
 
-./create.sh $SERVER_NAME $SERVER_CFG
+$DIR/scripts/create.sh $SERVER_NAME $SERVER_CFG
