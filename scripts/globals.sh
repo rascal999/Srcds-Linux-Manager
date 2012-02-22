@@ -1,3 +1,4 @@
 #!/bin/bash
 
-DIR='/home/to/srcds'
+DIR='/home/gmod/srcds'
+LOG="$DIR/orangebox/garrysmod/logs"

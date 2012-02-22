@@ -1,25 +1,48 @@
 SLM install
 
-- Move scripts directory into /home/user/srcds
+1. Prerequisites
 
-- Update scripts/globals.sh with path to srcds directory (e.g. /home/cs/srcds)
+* ULX mod for SLM plugins
 
-- Update to include full path to globals.sh in each script :/
+2. Install procedure
 
-- Create server configs under cfg/ directory (e.g. server1.cfg, server2.cfg)
+ 2.1 Moving
 
-- Append to svn_update script the servers you wish to restart after SVN update. Example:
+  * Move scripts directory into /home/user/srcds
 
-#Individual servers
-/home/gmod/srcds/scripts/update.sh construct server_construct.cfg
-/home/gmod/srcds/scripts/update.sh build server_build.cfg
+ 2.2 Updating scripts
 
-- Add check.sh and svn_update.sh crontabs. Example:
+  *** Update to include full path to globals.sh in each script :/ Will improve soon ***
 
-*/2  *    * * *   gmod    /home/gmod/srcds/scripts/check.sh construct server_construct.cfg
-*/2  *    * * *   gmod    /home/gmod/srcds/scripts/check.sh build server_build.cfg
-30  7    * * *   gmod    /home/gmod/srcds/scripts/svn_update.sh
+  * Update scripts/globals.sh with relevant path information
 
-The check script runs every two minutes, svn_update script runs at 0730 each day.
+  * Update the create.sh and update.sh scripts to tailor to your needs
 
-- Update the create.sh and svn_update.sh scripts to tailor to your needs.
+  * Append to update script the servers you wish to restart after SVN/git update. Example:
+
+   #Individual servers
+   /home/gmod/srcds/scripts/update.sh construct server_construct.cfg
+   /home/gmod/srcds/scripts/update.sh build server_build.cfg
+
+ 2.3 Server configs
+
+  * Create server configs under cfg/ directory (e.g. server1.cfg, server2.cfg)
+
+  * Ensure the following in server configs:
+
+  "sv_logsdir" "logs/<THE_SERVER_NAME>"
+  "log" 			"1"
+  "sv_logfile"    	"1"
+  "sv_log_onefile"        "1"
+  "sv_logflush"   	"1"
+
+ 2.4 Crontab
+
+  * Add check.sh and update.sh crontabs. Example:
+
+   */4  *    * * *   gmod    /home/gmod/srcds/scripts/check.sh construct server_construct.cfg
+   */4  *    * * *   gmod    /home/gmod/srcds/scripts/check.sh build server_build.cfg
+   30  7    * * *   gmod    /home/gmod/srcds/scripts/update.sh
+
+  The check script runs every two minutes, update script runs at 0730 each day.
+

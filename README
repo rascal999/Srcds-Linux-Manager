@@ -1,5 +1,7 @@
 SLM - Srcds Linux Manager
 
-SLM eases administration of srcd servers. When I ran Gmod servers in the past I found that once every few days the server would crash and require a manual restart. This script should eliminate the need to do this by checking server pulse every two minutes (by default).
+SLM eases administration of srcd servers. When I ran Gmod servers in the past I found that once every few days the server would crash and require a manual restart.
+
+SLM also supports plugins which work by parsing log files to interact with players in-game. Example plugins are provided, including a profanity plugin.
 
 Queries or question, please email me at aidan.marlin [at] gmail [dot] com
