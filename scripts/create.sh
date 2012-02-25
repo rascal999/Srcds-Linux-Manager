@@ -8,6 +8,12 @@ SERVER_NAME=$1
 SERVER_CFG=$2
 SERVER_PORT=$3
 
+#Instance already exists?
+if [[ -f $DIR/scripts/pid/$SERVER_NAME.pid ]]; then
+   echo "This instance already exists, not creating.."
+   exit
+fi
+
 if [[ "$SERVER_PORT" == "" ]]; then
    #You may want to adjust this line if you wish to run something other than Gmod
    /usr/bin/screen -dmS $SERVER_NAME $DIR/orangebox/srcds_run -console -game garrysmod -timeout 3 -pidfile $DIR/scripts/pid/$SERVER_NAME.pid +exec $SERVER_CFG

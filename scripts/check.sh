@@ -8,7 +8,7 @@ SERVER_NAME=$1
 SERVER_CFG=$2
 SERVER_PORT=$3
 
-#Check instance is alive
+#Check instance is supposed to be alive
 #Update?
 if [[ -f $DIR/scripts/lock/$SERVER_NAME.update.lock || ! -f $DIR/scripts/pid/$SERVER_NAME.pid ]]; then exit; fi
 

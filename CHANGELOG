@@ -1,3 +1,9 @@
+* v0.2.2
+
+- [Bug] Plugin bug would not kill tail processes
+- [Bug] Plugin bug would tail unnecessary log files
+- [Bug] Other plugin fixes
+
 * v0.2.1
 
 - [Feature] Port can be specified for each instance
