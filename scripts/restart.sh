@@ -1,9 +1,12 @@
 #!/bin/bash
 
+#./restart.sh <server_name> <server_config> [server_port]
+
 source /home/gmod/srcds/scripts/globals.sh
 
 SERVER_NAME=$1
 SERVER_CFG=$2
+SERVER_PORT=$3
 
 #Prevent check script restarting the server during update
 touch $DIR/scripts/lock/$SERVER_NAME.update.lock
@@ -32,4 +35,4 @@ touch $DIR/scripts/lock/$SERVER_NAME.update.lock
 /usr/bin/screen -dR $SERVER_NAME -X stuff $'exit\n'
 #sleep 5
 
-$DIR/scripts/create.sh $SERVER_NAME $SERVER_CFG
+$DIR/scripts/create.sh $SERVER_NAME $SERVER_CFG $SERVER_PORT

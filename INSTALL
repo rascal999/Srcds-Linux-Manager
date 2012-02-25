@@ -21,7 +21,7 @@ SLM install
   * Append to update script the servers you wish to restart after SVN/git update. Example:
 
    #Individual servers
-   /home/gmod/srcds/scripts/update.sh construct server_construct.cfg
+   /home/gmod/srcds/scripts/update.sh construct server_construct.cfg 27015
    /home/gmod/srcds/scripts/update.sh build server_build.cfg
 
  2.3 Server configs
@@ -30,17 +30,17 @@ SLM install
 
   * Ensure the following in server configs:
 
-  "sv_logsdir" "logs/<THE_SERVER_NAME>"
+  "sv_logsdir" 			"logs/<THE_SERVER_NAME>"
   "log" 			"1"
-  "sv_logfile"    	"1"
-  "sv_log_onefile"        "1"
-  "sv_logflush"   	"1"
+  "sv_logfile"    		"1"
+  "sv_log_onefile"        	"1"
+  "sv_logflush"   		"1"
 
  2.4 Crontab
 
   * Add check.sh and update.sh crontabs. Example:
 
-   */4  *    * * *   gmod    /home/gmod/srcds/scripts/check.sh construct server_construct.cfg
+   */4  *    * * *   gmod    /home/gmod/srcds/scripts/check.sh construct server_construct.cfg 27015
    */4  *    * * *   gmod    /home/gmod/srcds/scripts/check.sh build server_build.cfg
    30  7    * * *   gmod    /home/gmod/srcds/scripts/update.sh
 
