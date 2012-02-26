@@ -1,3 +1,7 @@
+* v0.2.3
+
+- [Bug] Instances not restarting after update
+
 * v0.2.2
 
 - [Bug] Plugin bug would not kill tail processes

@@ -10,8 +10,6 @@ SLM install
 
   * Move scripts directory into /home/user/srcds
 
-  * Create scripts/lock directory
-
  2.2 Updating scripts
 
   *** Update to include full path to globals.sh in each script :/ Will improve soon ***
