@@ -28,6 +28,6 @@ if [[ -f $DIR/scripts/lock/$SERVER_NAME.update.lock ]]; then
 fi
 
 #Load plugins. Comment out to disable
-$DIR/scripts/plugins/profanity.sh $SERVER_NAME &
-$DIR/scripts/plugins/stats.sh $SERVER_NAME &
-#$DIR/scripts/plugins/props.sh $SERVER_NAME &
+#$DIR/scripts/plugins/profanity.sh $SERVER_NAME &
+#$DIR/scripts/plugins/stats.sh $SERVER_NAME &
+$DIR/scripts/plugins/props.sh $SERVER_NAME &

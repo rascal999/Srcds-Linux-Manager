@@ -1,3 +1,8 @@
+* v0.3.0
+
+- [Feature] Prop Spam Protection
+- [Feature] Crash log
+
 * v0.2.3
 
 - [Bug] Instances not restarting after update
@@ -21,3 +26,10 @@
 * v0.1.1
 
 - Fixed path bug which broke cron update/restarts.
+
+#Legend:
+
+0.0.0
+| | |_ Bug fixes
+| |___ Feature release
+|_____ Major release
