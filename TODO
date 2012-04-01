@@ -1,7 +1,7 @@
 SLM TODO:
 
+** LUA scripts to replace Bash based plugins
 ** srcds and slm installation script and manual
-** Ban instead of kick on Prop Spam Protection plugin
 * !stats
 * Custom MOTD per server
 * Cross server comms?

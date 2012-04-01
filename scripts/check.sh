@@ -14,10 +14,11 @@ if [[ -f $DIR/scripts/lock/$SERVER_NAME.update.lock || ! -f $DIR/scripts/pid/$SE
 
 Pid=`cat $DIR/scripts/pid/$SERVER_NAME.pid`
 Instance_Alive=`ps -A | grep $Pid | wc -l`
+
 if [[ $Instance_Alive != "1" ]]; then
    $DIR/scripts/create.sh $SERVER_NAME $SERVER_CFG $SERVER_PORT
 
    #Log crashes
    Date=`date`
-   echo "$Date -- $SERVER_NAME on port $SERVER_PORT using $SERVER_CFG crashed." >> $DIR/logs/$SERVER_NAME
+   echo "$Date -- $SERVER_NAME on port $SERVER_PORT using $SERVER_CFG crashed." >> $DIR/scripts/logs/$SERVER_NAME
 fi
