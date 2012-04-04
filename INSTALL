@@ -1,16 +1,14 @@
 SLM install
 
-1. Prerequisites
+1. Install procedure
 
-* ULX and EV mod for SLM plugins
-
-2. Install procedure
-
- 2.1 Moving
+ 1.1 Moving
 
   * Move scripts directory into /home/user/srcds
 
- 2.2 Updating scripts
+  * Move scripts/plugins/lua/autorun/server/ to appropriate lua directory for SLM LUA modules
+
+ 1.2 Updating scripts
 
   *** Update to include full path to globals.sh in each script :/ Will improve soon ***
 
@@ -24,7 +22,7 @@ SLM install
    /home/gmod/srcds/scripts/update.sh construct server_construct.cfg 27015
    /home/gmod/srcds/scripts/update.sh build server_build.cfg
 
- 2.3 Server configs
+ 1.3 Server configs
 
   * Create server configs under cfg/ directory (e.g. server1.cfg, server2.cfg)
 
@@ -36,7 +34,7 @@ SLM install
   "sv_log_onefile"        	"1"
   "sv_logflush"   		"1"
 
- 2.4 Crontab
+ 1.4 Crontab
 
   * Add check.sh and update.sh crontabs. Example:
 

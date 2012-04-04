@@ -1,3 +1,7 @@
+* v0.4.0
+
+- [Fetaure] After much keyboard mashing, I have finally added the first LUA module, SLM's AntiSpam.
+
 * v0.3.1
 
 - [Bug] Code cleanup, bug fixes

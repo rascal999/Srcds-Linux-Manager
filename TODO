@@ -1,6 +1,6 @@
 SLM TODO:
 
-** LUA scripts to replace Bash based plugins
+** LUA scripts to replace Bash based plugins (started)
 ** srcds and slm installation script and manual
 * !stats
 * Custom MOTD per server
